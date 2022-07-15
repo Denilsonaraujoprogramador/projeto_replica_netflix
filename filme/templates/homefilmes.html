@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block titulo %}
+Home Filmes Replica NetFlix
+{% endblock %}
+
+
+{% block content %}
+<div class="py-12">
+    {% for filme in object_list %}
+    <a href="{% url 'filme:detalhesfilme' filme.pk %}">
+        <p>{{ filme.titulo }}</p>
+    </a>
+    <p>{{ filme.descricao }}</p>
+    <img src="{{ filme.thumb.url }}">
+    {% endfor %}
+</div>
+{% endblock %}

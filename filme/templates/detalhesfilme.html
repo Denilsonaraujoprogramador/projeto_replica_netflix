@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+
+{% block titulo %}
+Home Filmes Replica NetFlix
+{% endblock %}
+
+
+{% block content %}
+<div class="py-12">
+    <h1>Esse é o detalhe do filme:</h1>
+    <p>{{ object }}</p>
+    <p>{{ object.descricao }}</p>
+    <img src="{{ object.thumb.url }}">
+
+    <h2>Episódios</h2>
+    {% for episodio in object.episodios.all %}
+    <a href="{{ episodio.video }}">
+        <p>Episódio {{ forloop.counter }}: {{ episodio.titulo }}</p>
+    </a>
+    {% endfor %}
+</div>
+
+<div class="py-12">
+    <h2>Filmes Relacioandos:</h2>
+    {% for filme in filmes_relacionados %}
+    <p>
+        <a href="">
+            {{ filme.titulo }}
+        </a>
+    </p>
+    {% endfor %}
+</div>
+
+{% endblock %}
