@@ -29,7 +29,7 @@ class Detalhesfilme(DetailView):
     def get_context_data(self, **kwargs):
         context = super(Detalhesfilme, self).get_context_data(**kwargs)
         #filtras tabela de filmes por categoria
-        filmes_relacionados = Filme.object.filter(categoria=self.get_object().categoria)[0:5]
+        filmes_relacionados = Filme.objects.filter(categoria=self.get_object().categoria)[0:5]
         context["filmes_relacionados"] = filmes_relacionados
         return context
 

@@ -21,10 +21,10 @@ Home Filmes Replica NetFlix
 </div>
 
 <div class="py-12">
-    <h2>Filmes Relacioandos:</h2>
+    <h2>Filmes Relacionados:</h2>
     {% for filme in filmes_relacionados %}
     <p>
-        <a href="">
+        <a href="{% url 'filme:detalhesfilme' filme.pk %}">
             {{ filme.titulo }}
         </a>
     </p>
