@@ -1,23 +1,21 @@
 from multiprocessing import context
 from unicodedata import category
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from .models import Filme
 from django.views.generic import TemplateView, ListView, DetailView
 from django.contrib.auth.mixins import LoginRequiredMixin
 
 
-# Create your views here.
-#def homepage(request):
-#    return render(request, 'homepage.html')
-
 class Homepage(TemplateView):
     template_name = "homepage.html"
 
-#def homefilmes(request):
-#    context = {}
-#    lista_filmes = Filme.objects.all()
-#    context ['lista_filmes'] = lista_filmes
-#    return render(request, 'homefilmes.html', context)
+    def get(self, request, *args, **kwargs):
+        if request.user.is_authenticated: #verifica se o usuario está autenticado/logado
+            #redireciona para home
+            return redirect('filme:homefilmes')
+        else:
+            return super().get(request, *args, **kwargs) #redireciona para a home page desse template home page
+
 
 class Homefilmes(LoginRequiredMixin, ListView):
     template_name = "homefilmes.html"
@@ -55,5 +53,20 @@ class Pesquisafilme(LoginRequiredMixin, ListView):
         else:
             return None
 
+class Paginaperfil(LoginRequiredMixin ,TemplateView):
+    template_name = "editarperfil.html"
 
-    
+class Criarconta(TemplateView):
+    template_name = "criarconta.html"
+
+
+
+#def homepage(request):
+#    return render(request, 'homepage.html')
+
+
+#def homefilmes(request):
+#    context = {}
+#    lista_filmes = Filme.objects.all()
+#    context ['lista_filmes'] = lista_filmes
+#    return render(request, 'homefilmes.html', context)    
