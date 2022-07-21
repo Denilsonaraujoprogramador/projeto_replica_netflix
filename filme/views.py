@@ -72,6 +72,7 @@ class Paginaperfil(LoginRequiredMixin ,UpdateView):
     def get_success_url(self):
         return reverse('filme:homefilmes')
         
+        
 
 class Criarconta(FormView):
     template_name = "criarconta.html"
