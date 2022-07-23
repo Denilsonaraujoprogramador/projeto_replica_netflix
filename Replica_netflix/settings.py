@@ -146,3 +146,11 @@ LOGIN_URL = 'filme:login'
 CRISPY_ALLOWED_TEMPLATE_PACKS = 'bootstrap5'
 
 CRISPY_TEMPLATE_PACK = 'bootstrap5'
+
+
+#Coisas que alterei
+
+#DEBUG = True
+#ALLOWED_HOSTS = ['127.0.0.1:8000', 'orkutflix.herokuapp.com']
+#   'withenoise.middleware.WitheNoiseMiddleware',
+#WSGI_APPLICATION = 'Replica_netflix.wsgi.application'

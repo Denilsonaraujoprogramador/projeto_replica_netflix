@@ -1,0 +1,1 @@
+web: gunicorn Replica_netflix.wsgi --log-file -
