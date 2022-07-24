@@ -149,7 +149,7 @@ CRISPY_TEMPLATE_PACK = 'bootstrap5'
 
 #Coisas que alterei
 
-#DEBUG = True
+#DEBUG = False
 #ALLOWED_HOSTS = ['127.0.0.1:8000', 'orkutflix.herokuapp.com']
 #   'withenoise.middleware.WitheNoiseMiddleware',
 #WSGI_APPLICATION = 'Replica_netflix.wsgi.application'
