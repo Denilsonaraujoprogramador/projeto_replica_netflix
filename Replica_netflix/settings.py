@@ -25,8 +25,7 @@ SECRET_KEY = 'django-insecure-=vtkokjb^p26(rnmxxvv(a8)ecl+y--a%qnly=df+#b59&k)+h
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = [
-'127.0.0.1:8000', 'orkutflix.herokuapp.com',]
+ALLOWED_HOSTS = ['127.0.0.1:8000', 'orkutflix.herokuapp.com',]
 
 # Application definition
 
