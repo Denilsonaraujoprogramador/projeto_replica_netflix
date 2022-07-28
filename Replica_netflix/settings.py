@@ -43,7 +43,7 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
-    'withenoise.middleware.WitheNoiseMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -151,5 +151,5 @@ CRISPY_TEMPLATE_PACK = 'bootstrap5'
 
 #DEBUG = False
 #ALLOWED_HOSTS = ['127.0.0.1:8000', 'orkutflix.herokuapp.com']
-#   'withenoise.middleware.WitheNoiseMiddleware',
+#   'whitenoise.middleware.WhiteNoiseMiddleware',
 #WSGI_APPLICATION = 'Replica_netflix.wsgi.application'
