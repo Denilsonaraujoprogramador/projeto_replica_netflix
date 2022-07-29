@@ -39,6 +39,8 @@ INSTALLED_APPS = [
     'filme',
     'crispy_forms',
     'crispy_bootstrap5',
+    'claudinary_storage',
+    'claudinary',
 ]
 
 MIDDLEWARE = [
@@ -149,6 +151,14 @@ LOGIN_URL = 'filme:login'
 CRISPY_ALLOWED_TEMPLATE_PACKS = 'bootstrap5'
 
 CRISPY_TEMPLATE_PACK = 'bootstrap5'
+
+
+CLOUDINARY_STORAGE = {
+    'CLOUD_NAME': 'htu5aoctd',
+    'API_KEY': '679896973275955',
+    'API_SECRET': 'XfzGJzxuIXvrFLZvT0khM6_tk5U',
+}
+DEFAULT_FILE_STORAGE = 'claudinary_storage.storage.MediaCloudnaryStorage'
 
 
 #Coisas que alterei
